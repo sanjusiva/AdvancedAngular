@@ -1,0 +1,20 @@
+<p>form works!</p> 
+<div>
+    <h3>Input property</h3>
+    {{value()}}
+    {{aliasValue}}
+    {{trimString()}}
+    {{toTwo()}}
+    {{bindingValue()}}
+    <button (click)="setValues()">Set value</button>
+</div>
+<div [formGroup]="form">
+    <div>
+        <input formControlName="password" placeholder="Enter password" />
+        <input formControlName="confirmPassword" placeholder="Enter confirm password" />
+
+    </div>
+    <div *ngIf="form.errors?.['passwordMismatch']">
+      Passwords do not match!
+    </div>
+</div>
