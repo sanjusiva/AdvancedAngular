@@ -2,3 +2,22 @@
 {{value}}
 
 <app-todo-list></app-todo-list>
+
+<h1>Welcome!</h1>
+
+@defer (on interaction){
+    <app-form [value]="value" [trimString]="'Hello   '" [toTwo]="23" [sliderValue]="11" [(bindingValue)]="value"></app-form>
+}
+@placeholder{
+    <p>Loading user profile...</p>
+}
+
+<div>
+    <h2>RouteReuseStrategy</h2>
+    <nav>
+      <a routerLink="/users" routerLinkActive="active">Users</a> |
+      <a routerLink="/about" routerLinkActive="active">About</a>
+    </nav>
+</div>
+
+<router-outlet></router-outlet>
