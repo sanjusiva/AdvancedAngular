@@ -1,0 +1,30 @@
+<div class="card">
+  <h3>Child Component</h3>
+
+  <!-- The slot where parent content will appear -->
+  <ng-content></ng-content>
+</div>
+
+
+<!-- multi slot -->
+ <div class="modal">
+  <header>
+    <ng-content select="[modal-title]"></ng-content>
+  </header>
+
+  <section>
+    <ng-content select="[modal-body]"></ng-content>
+  </section>
+
+  <footer>
+    <ng-content select="[modal-actions]"></ng-content>
+  </footer>
+</div>
+
+<!-- Dynamic Content with ngTemplateOutlet -->
+ <header>
+  <ng-content select="[title]"></ng-content>
+</header>
+<section class="body">
+    <ng-container *ngTemplateOutlet="bodyTemplate"></ng-container>
+</section>
