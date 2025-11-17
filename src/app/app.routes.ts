@@ -4,6 +4,7 @@ import { About } from './RouteReuse/about/about';
 import { App } from './app';
 import { Parent } from './contentProjection/parent/parent';
 import { Search } from './impurePipe/search/search';
+import { ViewChildCompnent } from './viewChild/view-child/view-child';
 
 export const routes: Routes = [
     { path: 'users', component: Users },
@@ -11,5 +12,6 @@ export const routes: Routes = [
     { path: 'first', component: App },
     { path: 'content', component: Parent },
     { path: 'pipe', component: Search },
+    { path: 'view', component: ViewChildCompnent },
     { path: '', redirectTo: 'first', pathMatch: 'full' }
 ];
