@@ -1,0 +1,7 @@
+<input [(ngModel)]="message" placeholder="Type a message..." />
+<button (click)="send()">Send</button>
+
+<ul>
+  <li *ngFor="let m of messages">{{ m }}</li>
+</ul>
+msg: {{messages|json}}

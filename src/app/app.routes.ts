@@ -5,6 +5,7 @@ import { App } from './app';
 import { Parent } from './contentProjection/parent/parent';
 import { Search } from './impurePipe/search/search';
 import { ViewChildCompnent } from './viewChild/view-child/view-child';
+import { Websocket } from './websocket/websocket/websocket';
 
 export const routes: Routes = [
     { path: 'users', component: Users },
@@ -13,5 +14,6 @@ export const routes: Routes = [
     { path: 'content', component: Parent },
     { path: 'pipe', component: Search },
     { path: 'view', component: ViewChildCompnent },
+    { path: 'websocket', component: Websocket },
     { path: '', redirectTo: 'first', pathMatch: 'full' }
 ];
