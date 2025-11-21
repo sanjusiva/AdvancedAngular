@@ -1,0 +1,5 @@
+<button (click)="loadPosts()">Load Posts</button>
+
+    <ul>
+      <li *ngFor="let p of posts">{{ p.title }}</li>
+    </ul>
