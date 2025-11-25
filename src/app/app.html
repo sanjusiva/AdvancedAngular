@@ -20,4 +20,11 @@
     </nav>
 </div>
 
+<button (click)="showProgress()">Show Progress</button>
+<app-progress *ngIf="isProgress()">
+  [start]="progressData.start"
+  [current]="progressData.current"
+  [end]="progressData.end"
+</app-progress>
+
 <router-outlet></router-outlet>

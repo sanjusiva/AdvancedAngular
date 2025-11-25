@@ -1,0 +1,20 @@
+<div class="arc-wrapper">
+  
+  <div class="gauge-container">
+    <div class="gauge-arc"
+         [style.background]="
+           'conic-gradient(#3a86ff ' + angle + 'deg, #ddd ' + angle + 'deg 180deg)'">
+    </div>
+    <div class="gauge-inner"></div>
+  </div>
+
+  <!-- Start label -->
+  <div class="label-start">{{ start }}</div>
+
+  <!-- End label -->
+  <div class="label-end">{{ end }}</div>
+
+  <!-- Middle progress text -->
+  <div class="label-center">{{ percentage | number:'1.0-0' }}%</div>
+
+</div>
